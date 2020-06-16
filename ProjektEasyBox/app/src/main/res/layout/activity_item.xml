@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ItemActivity"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <ImageView
+        android:id="@+id/item_image"
+        android:src="@android:drawable/btn_star_big_on"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="108dp"
+        android:minHeight="108dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/additionalPhotosContainer"/>
+
+    <LinearLayout
+        android:id="@+id/additionalPhotosContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/item_image"
+        app:layout_constraintBottom_toTopOf="@id/item_name">
+        <ImageView
+            android:id="@+id/additionalPhoto1"
+            android:src="@android:drawable/btn_star_big_on"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minWidth="108dp"
+            android:minHeight="108dp"/>
+        <ImageView
+            android:id="@+id/additionalPhoto2"
+            android:src="@android:drawable/btn_star_big_on"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minWidth="108dp"
+            android:minHeight="108dp"/>
+
+        <ImageView
+            android:id="@+id/additionalPhoto3"
+            android:src="@android:drawable/btn_star_big_on"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minWidth="108dp"
+            android:minHeight="108dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_name"
+        android:text="Item name"
+        android:gravity="center"
+        android:textSize="46sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/additionalPhotosContainer"
+        app:layout_constraintBottom_toTopOf="@+id/info_box" />
+    <LinearLayout
+        android:id="@+id/info_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/item_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/localization"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="localization"/>
+        <TextView
+            android:id="@+id/box"
+            android:text="box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"/>
+        <TextView
+            android:id="@+id/comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
